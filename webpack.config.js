@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -23,7 +24,12 @@ module.exports = (env, argv) => {
 
     resolve: {
       // Add '.ts' and '.tsx' as resolvable extensions.
-      extensions: [".ts", ".tsx", ".js", ".json"]
+      extensions: [".ts", ".tsx", ".js", ".json"],
+
+      // Add aliases for importing files from common locations.
+      alias: {
+        styles: path.resolve(__dirname, 'src/styles/'),
+      },
     },
 
     module: {
