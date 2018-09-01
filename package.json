@@ -10,7 +10,7 @@
     "build": "yarn run build:dev",
     "build:dev": "./node_modules/webpack/bin/webpack.js --mode development --config webpack.config.js",
     "build:prod": "./node_modules/webpack/bin/webpack.js --mode production --config webpack.config.js",
-    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --colors --port 3000 --open",
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --colors --port 3000",
     "test": "echo \"No tests defined.\""
   },
   "dependencies": {
