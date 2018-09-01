@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = (env, argv) => {
   // PRODUCTION will trigger optimization and compile all css into one minified file
@@ -63,6 +64,10 @@ module.exports = (env, argv) => {
     },
 
     plugins: [
+      // Define some constants for use through the application
+      new webpack.DefinePlugin({
+        'process.env.API_BASE': JSON.stringify(process.env.PQ_API_BASE) || '',
+      }),
       new MiniCssExtractPlugin({
         // Dynamically support HRM and single file minified css
         filename: PRODUCTION ? '[name].[hash].css' : '[name].css',
