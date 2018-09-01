@@ -11,6 +11,7 @@
     "build:dev": "./node_modules/webpack/bin/webpack.js --mode development --config webpack.config.js",
     "build:prod": "./node_modules/webpack/bin/webpack.js --mode production --config webpack.config.js",
     "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --colors --port 3000",
+    "start": "yarn dev",
     "test": "echo \"No tests defined.\""
   },
   "dependencies": {
