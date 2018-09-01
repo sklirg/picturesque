@@ -1,10 +1,10 @@
 {
-  "name": "typescript-react-webpack",
-  "version": "3.16.4",
+  "name": "picturesque",
+  "version": "1.0.0",
   "description": "Boilerplate for Typescript 3 React 16 and Webpack 4",
   "main": "app.js",
-  "repository": "https://github.com/myth/typescript-react-webpack",
-  "author": "myth",
+  "repository": "https://github.com/sklirg/picturesque",
+  "author": "sklirg",
   "license": "MIT",
   "scripts": {
     "build": "yarn run build:dev",
