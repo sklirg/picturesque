@@ -4,8 +4,6 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-const TITLE = "React 16 in Typescript 3 using Webpack 4"
-
 module.exports = (env, argv) => {
   // PRODUCTION will trigger optimization and compile all css into one minified file
   const PRODUCTION = argv.mode ? argv.mode === 'production' : process.env.NODE_ENV === 'production'
@@ -71,7 +69,6 @@ module.exports = (env, argv) => {
         chunkFilename: PRODUCTION ? '[id].[hash].css' : '[id].css'
       }),
       new HtmlWebpackPlugin({
-        title: TITLE,
         template: __dirname + "/src/app.html",
         filename: "index.html"
       })
