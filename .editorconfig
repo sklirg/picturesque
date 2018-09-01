@@ -1,0 +1,13 @@
+root = true
+
+# These options
+[*]
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+
+[*.{ts,tsx,js,json,scss}]
+indent_size = 2
+
+[Makefile]
+indent_style = tab
