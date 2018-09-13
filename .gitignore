@@ -6,3 +6,6 @@ dist/
 node_modules/
 npm-error.log
 yarn-error.log
+
+# OSX
+.DS_store
